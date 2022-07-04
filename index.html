@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+    <!-- top -->
+    <div class="For_Scrolling_to_top" id = "top">.</div>
+    
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <!-- &nbsp == empty space -->
+            <a href="#top" id="navbar__name"> &nbsp&nbsp Jiafu Li </a>
+
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <!-- href = # will take u to the specific id -->
+                    <a href="#top" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#education" class="navbar__links">Education</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#experiences" class="navbar__links">Experiences</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navbar Section -->
+
+
+    <!-- First Body Section -->
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>Hi! My name is Jiafu Li</h1>
+                <h2>I am an aspiring software developer and I want to create awesome software</h2>
+                <h3>Contact Information: <br>VA, DC Metropolitan Area <br>jl8jp@virginia.edu <br> 703-989-1083 <br>
+                </h3>
+                <a href="https://github.com/Lilegend124" class="social__icon--link" alt="github">
+                    <i class="fab fa-github fa-2x"></i>
+                </a> <a href="https://www.linkedin.com/in/jiafu-li-7865371b5/" 
+                    class="social__icon--link" alt="linkedin">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                
+            </div>
+            
+            <div class="main__img--container">
+                <!-- https://www.vecteezy.com/vector-art/180258-outstanding-set-of-software-engineers-vectors -->
+                <img src="images/pic1.png" alt="pic" id="main__img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="education" id = "education">
+        <h1>Education <br> <br> </h1>
+        <div class="education-grid-container">
+            <h2>University of Virginia <br> 
+                Bachelor of Science in Computer Science (September 2019 - May 2023) <br> <br>
+                Relevant Courses: Multivariable Calculus, Ordinary Differential Equations, Probability,
+                Linear Algebra, Discrete Mathematics, Program and Data Representation, Digital Logic Design, 
+                Theory of Computation, Advanced Software Development, Computer Architecture, 
+                Algorithms, Operating Systems, Intro to Cybersecurity <br> <br>
+                Skills: Python, Java, C++, HTML, CSS, Arduino
+            </h2>
+
+            <div class="education__img">
+                <img src="images/uva_logo.png" alt="uva_logo" id="uva_logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiences -->
+    <div class="experiences" id = "experiences">
+        <h1>Experiences</h1>
+        <div class="experiences__container">
+            <div class="wheelchair">
+                <h2>MAKE OH/IO Hackathon 2020</h2>
+                <h3> <a href="https://github.com/Lance1911/WheelChair-Obstacle-Sensor">Wheelchair Obstable Sensor System (click to see repo)</a></h3>
+                <h4>Collaborated on developing an Arduino Script in C++ 
+                    for the control of a self-detecting breaking wheelchair that senses 
+                    obstacles and breaks before passenger impact
+                </h4>
+            </div> 
+            <div class="research">
+                <h5>Summer Undergraduate Research Project 2021</h5>
+                <h6>VLC(Visible Light Communication) IoT Network for Sensing <br>
+                    •  Analyze the strengths and weaknesses of different IoT protocols<br>
+                    •  Develop a new type of IoT protocol that uses visible light communications (VLC) <br>
+                    •  Integrated the IoT VLC protocol using Arduino and testing its functionality <br>
+                    •  Evaluate different methods on how to prevent multiuser transmission interferences 
+                </h6>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+/* Video tutorial used: https://www.youtube.com/watch?v=FazgJVnrVuI&ab_channel=BrianDesign */
+
+/* Targets the entire content of the html file */
+* {
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* targets all a tags */
+a:link, a:visited, a:focus{
+    text-decoration: none;
+}
+
+
+/* Dummy object to scroll to top */
+.For_Scrolling_to_top{
+    background-color: #131313;
+    height: 0;
+}
+
+/* Always display at top of page */
+.navbar {
+    display: flex;
+    background: #131313;
+    height: 90px;
+    font-size: 1.2rem;
+
+    /* sticky and top: 0 played a role between fixed & relative based on the position where it is placed. */
+    position: sticky;   /* Ensures navbar stays up top after scroll     */
+    top: 0;
+
+    /* specifies the stack order of an element. Greater # is on top*/
+    z-index: 1000;
+}
+
+.navbar__container {
+    display: flex;
+    width: 100rem;  /* Covers the whole page */
+    margin: auto;
+    padding: auto;
+}
+
+#navbar__name{
+    /* Color linear-gradient to be applied to text */
+    background: -webkit-linear-gradient(#eee, #ff0844);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover {
+    color: #c5aaa8d5;
+    transition: all 0.3s ease; /*delay in color change when hover button  */
+}
+
+/* First Body Section CSS */
+.main{
+    background-color: #141414;
+}
+
+.main__container{
+    display:grid;
+    /* spaces between the words and image */
+    grid-template-columns: 1fr 1fr;
+    background-color: #141414;
+    max-width: 1300px;
+    padding: 100px;
+}
+
+/* Hi! My name is Jiafu Li */
+.main__content h1{
+    font-size: 3rem;
+    background-image: linear-gradient(to top, #70ffbfdb, #04ff6d );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/* I want to be an aspiring software developer and create awesome software */
+.main__content h2{
+    font-size: 2rem;
+    background-color: #fff;  
+    background-image: linear-gradient(to right, #BDFFFD, #9FFFF5 ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/* Contact information */
+.main__content h3{
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/*
+downarrow 
+https://www.w3schools.com/howto/howto_css_arrows.asp
+.main__content downarrow {
+    align-items: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+} 
+*/
+
+.main__img--container{
+    text-align: center;
+    height: auto;
+}
+
+#main__img {
+    height: relative;
+    width: 80%;
+}
+
+/* .main__img--container:hover{
+    transform: scale(1.075);
+    transition: 0.2s ease-out;
+} */
+
+/* Education CSS */
+.education{
+    width:100%;
+    height: auto;
+    padding-bottom: 10rem;
+    
+}
+
+/* Education */
+.education{
+    position: relative;
+    background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );
+}
+
+/* Education title */
+.education h1{
+    padding-top: 95px;
+    padding-left: 150px;
+    font-size: 3rem;
+    text-align: left;
+    background-color: #85ffbe;
+    background-image: linear-gradient(45deg, #85ffbe77 0%, #fffb7d49 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.education-grid-container{
+    display:grid;
+    grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+    max-width: 70%;
+    grid-column-gap: 10px;
+}
+
+/* University of Virginia <br> Bachelor of Science in Computer Science (Sept... */
+.education h2{
+    font-size: 1.3rem;
+    color:#fff;
+    grid-area:left;
+}
+
+.education__img{
+    text-align: center;
+    height: auto;
+    grid-area: right;
+}
+
+/* Experiences CSS */
+.experiences{
+    width:100%;
+    height: auto;
+    padding-bottom: 10rem;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% );
+}
+
+/* Experiences title */
+.experiences h1{
+    padding-top: 90px;
+    padding-left: 150px;
+    font-size: 3rem;
+    text-align: left;
+    background-color: rgba(232, 15, 15, 0.673);
+    background-image: linear-gradient(to left, 
+    #131313c8,
+    #13131351,
+    #1313131f,
+    #13131307
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.experiences__container {
+    display: list-item;
+    padding-right: 10em;
+    text-align: left;
+    
+}
+
+/* MAKE OH/IO Hackathon 2020 */
+.wheelchair h2{
+    font-size: 2rem;
+    padding-top: 40px;
+    padding-left: 200px;
+}
+
+/* Wheelchair Obstable Sensor System */
+.wheelchair h3{
+    padding-left: 200px;
+    font-size: 1.5rem;
+    background-color: rgba(19, 9, 216, 0.918);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.wheelchair h3:hover{
+    background-color: rgba(255, 2, 2, 0.726);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transition: 0.3s ease-out;
+}
+
+/* Collaborated on developing an... */
+.wheelchair h4{
+    padding-left: 200px;
+    font-size: 1.3rem;
+}
+/* Summer Undergraduate Research Project 2021 */
+.research h5{
+    padding-top: 40px;
+    padding-left: 200px;
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* VLC(Visible Light Communication) IoT Network for Sensing */
+.research h6{
+    padding-left: 200px;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/* Analyze the strengths and weaknesses of different IoT protocols */
+.research h7{
+    padding-left: 200px;
+    font-size: 1.3rem;
+}
+
+.research h8{
+    padding-left: 200px;
+    font-size: 1.3rem;
+}
+
+.research h9{
+    padding-left: 200px;
+    font-size: 1.3rem;
+}
+
+.research h10{
+    padding-left: 200px;
+    font-size: 1.3rem;
+}
+
+/* Social Icons */
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 960px){
+    * {
+        overflow-x: hidden; 
+    }
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+        overflow-x: hidden;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+        position: fixed; /* instead of absolute */ 
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        animation: hideMe 3s forwards;
+    }
+
+    /* https://programmersportal.com/how-to-hide-a-div-after-5-seconds-in-css/ */
+    @keyframes hideMe{
+        0%{
+            opacity: 1;
+        }
+        99.99%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
+    #navbar__name {
+        padding-left: 25px;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        width: 100%;
+        display: table;
+        font-size: 1rem;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor:pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .education{
+        align-items:center;
+        justify-self:center;
+        width:100%;
+        margin: auto;
+        padding: auto;
+        height: auto;
+    }
+    .education__img{
+        text-align: center;
+        height: auto;
+        grid-area: auto;
+        
+    }
+    .education-grid-container{
+        text-align:center;
+        padding-left: 5rem;
+        font-size: 2rem;
+
+    }
+
+    .experiences{
+        align-items:center;
+        justify-self:center;
+        width:100%;
+        margin: auto;
+        padding: auto;
+        height: auto;
+    }
+    .experiences h1{
+        text-align:center;
+        font-size: 2rem;
+    }
+    .experiences__container{
+        text-align:center;
+        font-size: 0.5rem; 
+    }
+    .research h5{
+        color: red;
+        font-size: 1.5rem;
+    }
+
+}
